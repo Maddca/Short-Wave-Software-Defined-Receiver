@@ -26,6 +26,11 @@ For specifications we originally were going to have a narrow bandpass filter, bu
  ## Theory
 <img width="870" alt="SDR Block Diagram" src="https://user-images.githubusercontent.com/103593959/172300478-5b9f30f3-213d-48fd-8808-7c275a4ef59f.png">
 
+The Block Diagram above shows the basics of how the SDR works. We get an input signal from the antenna which is passed through the bandpass filter and sent to the Tayloe Mixer that uses a 1:4 demultiplexer and low pass filters and ampliers to create the I and Q quardrature signals. After the demuiltiplexer creates 4 signals each 90 degrees out of phase with each other those signals are combined together to create the I and Q signals to be sent to the Audio Jack.
+
+## Schematic Version 6
+
+
 
 
  
