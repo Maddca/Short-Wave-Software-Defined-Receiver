@@ -53,7 +53,7 @@ Above is the part of the schematic dealing with the Raspberry Pi Pico. The main 
 ## Simulations
 Simulations were for the most part conducted in [LTSpice](https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html).
 ### Bandpass Filter Simulations
-<img width="922" alt="SDR BandPass Filter Simulation Graph" src="https://user-images.githubusercontent.com/103593959/172316174-f149d95a-da06-4cf1-9366-6e69636640dc.png">
+<img width="1013" alt="SDR Bandpass Filter Sim Graph" src="https://user-images.githubusercontent.com/103593959/172318649-42233a15-3bbd-4986-8b04-fb9e14d2ecc6.png">
 <img width="915" alt="SDR BandPass Filter LTSpice" src="https://user-images.githubusercontent.com/103593959/172316219-54d21552-6851-4861-8690-6f225e0667ba.png">
 The Bandpass filter was designed to pass frequencies between 7 and 12 MHz, which is what the ac simulation shows.
 
