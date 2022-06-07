@@ -2062,7 +2062,7 @@
     (uuid ff4e4763-3b68-4790-b2b7-a99f45617c11)
   )
 
-  (text "Multiple Feedback Lowpass Filter & Amplifier\n25 V/V with Cutoff Frequency of approx 100kHz\n"
+  (text "Multiple Feedback Lowpass Filter & Amplifier\n25 V/V with Cutoff Frequency of approx 60kHz\n"
     (at 175.26 19.05 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 038e9792-bbbd-4d6a-ad41-0356a4fa93a7)
