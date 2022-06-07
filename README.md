@@ -26,9 +26,27 @@ For specifications we originally were going to have a narrow bandpass filter, bu
  ## Theory
 <img width="870" alt="SDR Block Diagram" src="https://user-images.githubusercontent.com/103593959/172300478-5b9f30f3-213d-48fd-8808-7c275a4ef59f.png">
 
+The Block Diagram above shows the basics of how the SDR works. We get an input signal from the antenna which is passed through the bandpass filter and sent to the Tayloe Mixer that uses a 1:4 demultiplexer and low pass filters and ampliers to create the I and Q quardrature signals. After the demuiltiplexer creates 4 signals each 90 degrees out of phase with each other those signals are combined together to create the I and Q signals to be sent to the Audio Jack.
 
+## Schematic Version 6
 
+### Bandpass Filter
+<img width="985" alt="SDR BandPass Filter" src="https://user-images.githubusercontent.com/103593959/172302826-40fc8595-4909-4c58-8f03-eb0a1fa90c3c.png">
+ Above is the bandpass filter made using the [LC Filter Design Tool](https://rf-tools.com/lc-filter/.). It is a 3rd order, conventional series first, Butterworth, bandpass filter that passes 7-12Mhz frequencies.
  
- 
+ ### Tayloe Mixer
+ <img width="1231" alt="SDR Tayloe Mixer" src="https://user-images.githubusercontent.com/103593959/172303648-700520a2-89da-466e-b126-8586e74dde47.png">
+The Tayloe Mixer above is comprised of the Demultiplexer stage which seperates the input signal into four signals all 90 degrees out of phase with each other. Then the signals that are 180 degrees out of phase with each other are combined in the following amplifier and low pass filter stage using opamps. The filter/amplifier here is a multiple feedback low pass filter and amplifier, in this case multiple refers to the filter being second order rather than single order.
 
- 
+### Voltage Smoother
+<img width="604" alt="SDR Voltage Smoother" src="https://user-images.githubusercontent.com/103593959/172304110-ad263bd5-0f7e-4924-8e71-f7c88b45c8cd.png">
+The voltage smoother above simply uses varying capacitor sizes to lower the noise coming from the USB.
+
+### Oscillator
+<img width="998" alt="SDR Oscillator" src="https://user-images.githubusercontent.com/103593959/172304171-e6c24725-75b7-4256-bf23-c743ff63e073.png">
+The oscillator above is what outputs the clock signals necessary to run the Tayloe Mixer. It is controlled by the Raspberry Pi Pico on the SDA and SCL inputs.
+
+### Raspberry Pi Pico
+<img width="698" alt="SDR Raspberry Pi Pico" src="https://user-images.githubusercontent.com/103593959/172304244-dc54f33a-5759-4e20-bd7e-07ca2c132442.png">
+Above is the part of the schematic dealing with the Raspberry Pi Pico. The main thing of interest here is to note the pull up resistors and the GPIO pin the SDA and SCL are connected to, since the pin needs to be I2C compatible, in this case pins 6 and 7 or GPIO 4 and 5 are I2C compatible.
+
