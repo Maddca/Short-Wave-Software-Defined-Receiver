@@ -36,17 +36,17 @@ The Block Diagram above shows the basics of how the SDR works. We get an input s
  
  ### Tayloe Mixer
  <img width="1231" alt="SDR Tayloe Mixer" src="https://user-images.githubusercontent.com/103593959/172303648-700520a2-89da-466e-b126-8586e74dde47.png">
-
+The Tayloe Mixer above is comprised of the Demultiplexer stage which seperates the input signal into four signals all 90 degrees out of phase with each other. Then the signals that are 180 degrees out of phase with each other are combined in the following amplifier and low pass filter stage using opamps. The filter/amplifier here is a multiple feedback low pass filter and amplifier, in this case multiple refers to the filter being second order rather than single order.
 
 ### Voltage Smoother
 <img width="604" alt="SDR Voltage Smoother" src="https://user-images.githubusercontent.com/103593959/172304110-ad263bd5-0f7e-4924-8e71-f7c88b45c8cd.png">
-
+The voltage smoother above simply uses varying capacitor sizes to lower the noise coming from the USB.
 
 ### Oscillator
 <img width="998" alt="SDR Oscillator" src="https://user-images.githubusercontent.com/103593959/172304171-e6c24725-75b7-4256-bf23-c743ff63e073.png">
-
+The oscillator above is what outputs the clock signals necessary to run the Tayloe Mixer. It is controlled by the Raspberry Pi Pico on the SDA and SCL inputs.
 
 ### Raspberry Pi Pico
 <img width="698" alt="SDR Raspberry Pi Pico" src="https://user-images.githubusercontent.com/103593959/172304244-dc54f33a-5759-4e20-bd7e-07ca2c132442.png">
-
+Above is the part of the schematic dealing with the Raspberry Pi Pico. The main thing of interest here is to note the pull up resistors and the GPIO pin the SDA and SCL are connected to, since the pin needs to be I2C compatible, in this case pins 6 and 7 or GPIO 4 and 5 are I2C compatible.
 
