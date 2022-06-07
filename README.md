@@ -50,3 +50,14 @@ The oscillator above is what outputs the clock signals necessary to run the Tayl
 <img width="698" alt="SDR Raspberry Pi Pico" src="https://user-images.githubusercontent.com/103593959/172304244-dc54f33a-5759-4e20-bd7e-07ca2c132442.png">
 Above is the part of the schematic dealing with the Raspberry Pi Pico. The main thing of interest here is to note the pull up resistors and the GPIO pin the SDA and SCL are connected to, since the pin needs to be I2C compatible, in this case pins 6 and 7 or GPIO 4 and 5 are I2C compatible.
 
+## Simulations
+Simulations were for the most part conducted in [LTSpice](https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html).
+### Bandpass Filter Simulations
+<img width="922" alt="SDR BandPass Filter Simulation Graph" src="https://user-images.githubusercontent.com/103593959/172316174-f149d95a-da06-4cf1-9366-6e69636640dc.png">
+<img width="915" alt="SDR BandPass Filter LTSpice" src="https://user-images.githubusercontent.com/103593959/172316219-54d21552-6851-4861-8690-6f225e0667ba.png">
+The Bandpass filter was designed to pass frequencies between 7 and 12 MHz, which is what the ac simulation shows.
+
+### Lowpass Filter Simulations
+<img width="1050" alt="SDR MFLPFA Simulation Graph" src="https://user-images.githubusercontent.com/103593959/172317607-272e52aa-086b-4b29-aa43-51809930be00.png">
+<img width="874" alt="SDR MFLPFA LTSpice" src="https://user-images.githubusercontent.com/103593959/172317624-1e9dbeeb-1868-442b-8e47-05900adffd5f.png">
+
