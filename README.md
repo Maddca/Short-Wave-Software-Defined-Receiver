@@ -30,10 +30,23 @@ The Block Diagram above shows the basics of how the SDR works. We get an input s
 
 ## Schematic Version 6
 
-
-
-
+### Bandpass Filter
+<img width="985" alt="SDR BandPass Filter" src="https://user-images.githubusercontent.com/103593959/172302826-40fc8595-4909-4c58-8f03-eb0a1fa90c3c.png">
+ Above is the bandpass filter made using the [LC Filter Design Tool](https://rf-tools.com/lc-filter/.). It is a 3rd order, conventional series first, Butterworth, bandpass filter that passes 7-12Mhz frequencies.
  
- 
+ ### Tayloe Mixer
+ <img width="1231" alt="SDR Tayloe Mixer" src="https://user-images.githubusercontent.com/103593959/172303648-700520a2-89da-466e-b126-8586e74dde47.png">
 
- 
+
+### Voltage Smoother
+<img width="604" alt="SDR Voltage Smoother" src="https://user-images.githubusercontent.com/103593959/172304110-ad263bd5-0f7e-4924-8e71-f7c88b45c8cd.png">
+
+
+### Oscillator
+<img width="998" alt="SDR Oscillator" src="https://user-images.githubusercontent.com/103593959/172304171-e6c24725-75b7-4256-bf23-c743ff63e073.png">
+
+
+### Raspberry Pi Pico
+<img width="698" alt="SDR Raspberry Pi Pico" src="https://user-images.githubusercontent.com/103593959/172304244-dc54f33a-5759-4e20-bd7e-07ca2c132442.png">
+
+
