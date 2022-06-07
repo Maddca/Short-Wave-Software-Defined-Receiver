@@ -31,7 +31,7 @@ The Block Diagram above shows the basics of how the SDR works. We get an input s
 ## Schematic Version 6
 
 ### Bandpass Filter
-<img width="985" alt="SDR BandPass Filter" src="https://user-images.githubusercontent.com/103593959/172302826-40fc8595-4909-4c58-8f03-eb0a1fa90c3c.png">
+<img width="892" alt="SDR BandPass Filter V6" src="https://user-images.githubusercontent.com/103593959/172314893-75881478-3dc4-4661-bd4f-f85d9c326cb0.png">
  Above is the bandpass filter made using the [LC Filter Design Tool](https://rf-tools.com/lc-filter/.). It is a 3rd order, conventional series first, Butterworth, bandpass filter that passes 7-12Mhz frequencies.
  
  ### Tayloe Mixer
