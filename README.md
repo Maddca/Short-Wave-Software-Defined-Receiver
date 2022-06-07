@@ -9,7 +9,7 @@ For this project we were given the following design objectives by [Dr. Rob Frohn
  - Minimum discernible signal of less than 1uV
  - $25 Budget
 
-For specifications we originally we're going to have a narrow bandpass filter, but ended up switching to a relatively wider one in the later stages of the project.
+For specifications we originally were going to have a narrow bandpass filter, but ended up switching to a relatively wider one in the later stages of the project.
 
 #### Specifications
  - Frequency Range of 7-12MHz
@@ -22,6 +22,11 @@ For specifications we originally we're going to have a narrow bandpass filter, b
  
  ## Overview
  The SDR receiver connects to an antenna and filters, mixes, and amplifies that signal to achieve the desired I and Q signals. The I and Q signals are then sent through an external sound card with a sample rate of 48kHz where software then handles the demodulation of the signal into audio. The mixer requires a 90 degree offset of two clocks operating at a frequency that can be controlled through software. In our design we use a Raspberry Pi Pico to control an si5351 to supply those two 90 degree offset clocks. There were some significant issues with this since the code supplied by professor Frohne didn't work when ported over to the Raspberry Pi Pico. In theory though the Raspberry Pi Pico interfaces with Quisk to tune to a certain frequency by adjusting the frequency of the si5351 clocks.
+ 
+ ## Theory
+![SDR Block Diagram](Images/SDR Block Diagram.png)
+
+
  
  
 
