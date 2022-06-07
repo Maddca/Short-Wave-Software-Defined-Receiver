@@ -31,7 +31,7 @@ The Block Diagram above shows the basics of how the SDR works. We get an input s
 ## Schematic Version 6
 
 ### Bandpass Filter
-<img width="985" alt="SDR BandPass Filter" src="https://user-images.githubusercontent.com/103593959/172302826-40fc8595-4909-4c58-8f03-eb0a1fa90c3c.png">
+<img width="892" alt="SDR BandPass Filter V6" src="https://user-images.githubusercontent.com/103593959/172314893-75881478-3dc4-4661-bd4f-f85d9c326cb0.png">
  Above is the bandpass filter made using the [LC Filter Design Tool](https://rf-tools.com/lc-filter/.). It is a 3rd order, conventional series first, Butterworth, bandpass filter that passes 7-12Mhz frequencies.
  
  ### Tayloe Mixer
@@ -49,4 +49,15 @@ The oscillator above is what outputs the clock signals necessary to run the Tayl
 ### Raspberry Pi Pico
 <img width="698" alt="SDR Raspberry Pi Pico" src="https://user-images.githubusercontent.com/103593959/172304244-dc54f33a-5759-4e20-bd7e-07ca2c132442.png">
 Above is the part of the schematic dealing with the Raspberry Pi Pico. The main thing of interest here is to note the pull up resistors and the GPIO pin the SDA and SCL are connected to, since the pin needs to be I2C compatible, in this case pins 6 and 7 or GPIO 4 and 5 are I2C compatible.
+
+## Simulations
+Simulations were for the most part conducted in [LTSpice](https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html).
+### Bandpass Filter Simulations
+<img width="1013" alt="SDR Bandpass Filter Sim Graph" src="https://user-images.githubusercontent.com/103593959/172318649-42233a15-3bbd-4986-8b04-fb9e14d2ecc6.png">
+<img width="915" alt="SDR BandPass Filter LTSpice" src="https://user-images.githubusercontent.com/103593959/172316219-54d21552-6851-4861-8690-6f225e0667ba.png">
+The Bandpass filter was designed to pass frequencies between 7 and 12 MHz, which is what the ac simulation shows.
+
+### Lowpass Filter Simulations
+<img width="1050" alt="SDR MFLPFA Simulation Graph" src="https://user-images.githubusercontent.com/103593959/172317607-272e52aa-086b-4b29-aa43-51809930be00.png">
+<img width="874" alt="SDR MFLPFA LTSpice" src="https://user-images.githubusercontent.com/103593959/172317624-1e9dbeeb-1868-442b-8e47-05900adffd5f.png">
 
